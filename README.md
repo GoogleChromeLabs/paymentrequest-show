@@ -1,16 +1,9 @@
 # payment-request-show
 
-This repository contains the code for two websites:
-
-* Payment Request API demo site (https://paymentrequest.show/) in the main
-  directory and `app` subdirectory.
-* Bobpay.xyz website (https://bobpay.xyz) in the `bobpay` subdirectory.
-
 ## Deployment
 
-The apps can be deployed as node.js applications. In addition, `app.yaml`
-and `bobpay/app.yaml` are included here for the purposes of deploying on
-Google App Engine.
+The app can be deployed as node.js applications. In addition, `app.yaml` is
+included here for the purposes of deploying on Google App Engine.
 
 ### App Engine deployment
 
