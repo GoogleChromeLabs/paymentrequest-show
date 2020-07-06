@@ -1,21 +1,33 @@
 {
-  "name": "payment-request-show",
-  "version": "0.0.0",
-  "description": "Payment Request API demo site.",
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
   "scripts": {
-    "lint": "eslint '.'",
-    "start": "node app.js",
-    "gcp-build": "gulp generate-service-worker"
+    "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.4",
+    "line-pay": "^1.0.16",
+    "uuid": "^3.3.3",
+    "memory-cache": "^0.2.0",
+    "hbs": "^4.1.0",
+    "request": "^2.88.2",
+    "node-fetch": "^2.6.0"
   },
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@google-cloud/nodejs-repo-tools": "^3.3.0",
-    "eslint": ">4.18.2",
-    "eslint-config-google": "^0.7.1",
-    "gulp": "^3.9.1",
-    "sw-precache": "^5.1.0"
-  }
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
