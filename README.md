@@ -1,4 +1,4 @@
-# payment-request-show
+# paymentrequest-show
 
 ## Deployment
 

@@ -1,0 +1,99 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@import "@material/layout-grid/mdc-layout-grid";
+
+html, body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demo-area {
+  max-width: 900px;
+}
+
+.form-area {
+  margin: 30px 0;
+}
+
+/* #button_slot {
+  width: 250px;
+  min-height: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  align-self: center;
+} */
+
+#buttons * {
+  cursor: pointer;
+}
+
+.shipping-options {
+  opacity: 1.0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.is-disabled {
+  opacity: 0.2;
+  touch-action: none;
+  pointer-events: none;
+}
+
+code {
+  background-color: #eeeeee;
+  padding: 4px;
+}
+
+pre {
+  overflow: auto;
+  background-color: #eeeeee;
+  padding: 8px;
+}
+
+mwc-button {
+   --mdc-typography-button-text-transform: default;
+  height: 32px;
+  background-color: transparent;
+}
+
+.footer {
+  color: #fff;
+  width: 100%;
+  background-color: #555;
+}
+
+.footer a {
+  color: #fff;
+}
