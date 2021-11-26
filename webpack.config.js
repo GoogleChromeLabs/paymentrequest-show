@@ -39,11 +39,14 @@ module.exports = {
     extensions: [ '.ts', '.js' ]
   },
   plugins: [
-    // new CopyWebpackPlugin({
-    //   patterns: [{
-    //     from: path.join(src, 'style.css'),
-    //     to: path.join(dst, 'style.css')
-    //   }]
-    // })
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.join(src, 'style.css'),
+        to: path.join(dst, 'style.css')
+      },{
+        from: path.join(src, 'images'),
+        to: path.join(dst, 'images'),
+      }]
+    })
   ]
 }

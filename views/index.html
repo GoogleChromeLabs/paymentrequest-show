@@ -14,8 +14,8 @@
   limitations under the License
   -->
   <head>
-    <title>Web Payment Merchant Demo</title>
-    <meta name="description" content="Web Payment Merchant Demo">
+    <title>PaymentRequest.show()</title>
+    <meta name="description" content="Web Payment - Payment Request API Demo">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,79 +26,51 @@
   </head>
   <body>
     <mwc-top-app-bar-fixed>
-      <span slot="title">Payment Request API Demo</span>
+      <span slot="title">PaymentRequest.show()</span>
     </mwc-top-app-bar-fixed>
     <main>
       <div class="demo-area">
-        <div class="">
-          <section class="mdc-layout-grid">
-            <p>This demo allows you to play with the various options, inputs and
-            payment methods you can provide to the PaymentRequest API.</p>
-            <p>Please note that this demo <strong>will not charge you</strong>.
-            It'll simply go through the payment process and print the details at
-            the bottom of this page.</p>
-            <p>The values will not add up in the total since the <strong>Payment
-            Request API does no calculations</strong>.</p>
+        <h2>What is Payment Request?</h2>
 
-            <h2>Display Items</h2>
-            <p>It's possible to define any number of display items in the
-            Payment Request UI.</p>
-            <p>It's up to the merchant to ensure that the list of items equals
-            the total value shown in the order summary, the Payment Request API
-            performs no calculations.</p>
-            <p><em>Try adding both valid and invalid amounts in the display
-            items and the summary total to see the differences.</em></p>
+        <p>Payment Request is a new way for merchants to accept payments online.
+        It is integrated in most major browsers, and greatly simplifies the
+        checkout experience for users.</p>
 
-            <div id="display-items-container"></div>
+        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe
+        src="https://www.youtube.com/embed/hU89pPBmhds?rel=0&showinfo=0&autohide=1"
+        width="640" height="360" frameborder="0"
+        style="position:absolute;width:100%;height:100%;left:0"
+        allowfullscreen></iframe></div>
 
-            <h2>Order Summary</h2>
-            <p>The order summary is the value that is shown most prominently to
-            the user, it should be treated as the total of the users
-            transaction.</p>
-            <p><em>Change the name, total and currency to see how it effects the
-            UI.</em></p>
+        <h2>1 Minute Summary</h2>
 
-            <div id="total-container"></div>
+        <p>The Payment Request API is a new W3C web standard being introduced to
+        make payments easier on a merchant website. It replaces the traditional
+        billing address, shipping address and credit card forms with a browser
+        dialog to efficiently get data from the user to the merchant.</p>
 
-            <h2>Options</h2>
-            <p>The API can also request information for the user. The type of
-            transaction will determine will often dictate what is needed.</p>
+        <p><img style="display: block; margin: 0 auto" class="outline"
+        src="images/pr-woocommerce.gif" width="360px" height="640px"></p>
 
-            <div id="options-container"></div>
+        <h2>Browser Support</h2>
 
-            <!-- <h2>Can Make Payment</h2>
-            <p>You can call <code>paymentRequest.canMakePayment()</code> before calling <code>paymentRequest.show()</code>
-            to determine if the PaymentRequest object can be used to make a payment.</p>
+        <p>Payment Request API is being implemented by most major browsers
+        (Chrome, Edge, Firefox, Opera, and others).</p>
 
-            <mwc-button raised>Can Make Payment</mwc-button>
+        <p class="ciu_embed" data-feature="payment-request" data-periods="future_2,future_1,current,past_1">
+          <a href="http://caniuse.com/#feat=payment-request">Can I Use
+          payment-request?</a> Data on support for the payment-request feature
+          across the major browsers from caniuse.com.
+        </p>
 
-            <h2>paymentRequest.canMakePayment() Result</h2>
-            <p>If you call <code>canMakePayment()</code>, the result will be printed below.</p>
+        <h2>Try it yourself</h2>
 
-            <div class="can-make-payment-result-container">
-              <pre>Press the "Can Make Payment" button.</pre>
-            </div> -->
+        <h3>API Demo</h3>
 
-            <h2>Call Payment Request</h2>
-            <p>The Payment Request API has a range of supported payment
-            methods.</p>
+        <p>This site also has a demo that allows you to play with the various options available to the API.</p>
 
-            <p>When you are ready to request payment from the user, you call
-            <code>paymentRequest.show()</code>, which is what will happen when
-            you click one of "Pay" buttons below.</p>
+        <mwc-button raised><a href="/demo">Try it Out</a></mwc-button>
 
-            <div id="payment-methods-container"></div>
-
-            <h2>paymentRequest.show() Result</h2>
-            <p>If you complete a "purchase" with the payment request API, the
-            result will be printed below.</p>
-
-            <div id="payment-request-result-container">
-              <pre>Press the "Buy Now" button.</pre>
-            </div>
-
-          </section>
-        </div>
       </div>
       <footer class="footer mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell">
@@ -111,5 +83,6 @@
     <mwc-snackbar id="snackbar"></mwc-snackbar>
 
     <script src="/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/caniuse-embed/1.0.1/caniuse-embed.min.js"></script>
   </body>
 </html>

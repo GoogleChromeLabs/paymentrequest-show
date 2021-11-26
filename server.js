@@ -40,9 +40,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
   response.render('index.html');
+});
+
+app.get('/demo', function(request, response) {
+  response.render('demo.html');
 });
 
 // listen for requests :)

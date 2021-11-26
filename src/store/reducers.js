@@ -70,11 +70,6 @@ const request = (state = [], action) => {
   switch (action.type) {
     case INIT_PAYMENT_METHODS:
       paymentMethods = [{
-        supportedMethods: 'basic-card',
-        data: `{
-          "supportedNetworks": [ "visa", "master", "jcb" ]
-        }`
-      }, {
         supportedMethods: "https://google.com/pay",
         data: `{
           "environment": "TEST",
@@ -100,8 +95,9 @@ const request = (state = [], action) => {
           }]
         }`
       }, {
-        supportedMethods: 'https://payment-handler-example2.appspot.com',
+        supportedMethods: 'https://bobbucks.dev/pay',
         data: '{}'
+      }, {
       }];
       return { ...state, paymentMethods }
     case ADD_PAYMENT_METHOD:

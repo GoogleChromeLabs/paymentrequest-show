@@ -13,4 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-runtime: nodejs10
+runtime: nodejs14
+env_variables:
+  ORIGIN: https://paymentrequest.show

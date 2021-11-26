@@ -15,6 +15,10 @@
  */
 @import "@material/layout-grid/mdc-layout-grid";
 
+* {
+  --mdc-theme-on-primary: white;
+}
+
 html, body {
   font-family: Roboto;
   margin: 0;
@@ -41,6 +45,7 @@ main {
 
 .demo-area {
   max-width: 900px;
+  margin-bottom: 100px;
 }
 
 .form-area {
@@ -54,6 +59,11 @@ main {
   text-align: center;
   align-self: center;
 } */
+
+mwc-button a {
+  color: var(--mdc-theme-on-primary);
+  text-decoration: none;
+}
 
 #buttons * {
   cursor: pointer;
@@ -80,12 +90,6 @@ pre {
   overflow: auto;
   background-color: #eeeeee;
   padding: 8px;
-}
-
-mwc-button {
-   --mdc-typography-button-text-transform: default;
-  height: 32px;
-  background-color: transparent;
 }
 
 .footer {
