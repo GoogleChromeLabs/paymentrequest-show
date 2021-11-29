@@ -97,7 +97,6 @@ const request = (state = [], action) => {
       }, {
         supportedMethods: 'https://bobbucks.dev/pay',
         data: '{}'
-      }, {
       }];
       return { ...state, paymentMethods }
     case ADD_PAYMENT_METHOD:

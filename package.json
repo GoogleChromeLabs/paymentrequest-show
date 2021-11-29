@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack",
-    "deploy": "gcloud app deploy dev.yaml --project=paymentrequest-show",
-    "deploy:prod": "gcloud app deploy app.yaml --project=paymentrequest-show"
+    "deploy": "npm run build && gcloud app deploy dev.yaml --project=paymentrequest-show",
+    "deploy:prod": "npm run build && gcloud app deploy app.yaml --project=paymentrequest-show"
   },
   "dependencies": {
     "@material/layout-grid": "^7.0.0",

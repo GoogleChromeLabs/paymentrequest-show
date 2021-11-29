@@ -59,8 +59,8 @@ const renderApp = () => {
     document.querySelector('#display-items-container'));
   render(Total(paymentRequest.details.total),
     document.querySelector('#total-container'));
-  render(Options(paymentRequest),
-    document.querySelector('#options-container'));
+  // render(Options(paymentRequest),
+  //   document.querySelector('#options-container'));
   render(Result(result),
     document.querySelector('#payment-request-result-container'));
 }
