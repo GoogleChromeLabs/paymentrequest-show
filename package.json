@@ -20,7 +20,7 @@
     "@material/mwc-textarea": "^0.25.3",
     "@material/mwc-textfield": "^0.25.3",
     "@material/mwc-top-app-bar-fixed": "^0.25.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "hbs": "^4.2.0",
     "lit-html": "^1.4.1",
     "redux": "^4.1.2"
