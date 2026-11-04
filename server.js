@@ -24,14 +24,11 @@ app.use(express.static('dist'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-let origin = process.env.ORIGIN;
+const origin = process.env.ORIGIN;
 
 app.use((req, res, next) => {
-  if (!origin) {
-    origin = `${req.headers.protocol||'http'}://${req.headers.host}`;
-    console.log(`Origin: "${origin}" was set because it was undefined.`);
-  }
-  if (!/^http:\/\/localhost/.test(origin) &&
+  if (origin &&
+      !/^http:\/\/localhost/.test(origin) &&
       req.get('x-forwarded-proto') &&
      (req.get('x-forwarded-proto')).split(',')[0] !== 'https') {
     return res.redirect(301, `${origin}`);
